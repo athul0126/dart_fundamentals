@@ -1,4 +1,4 @@
-/*tatic variables and static functions are associated with the class rather than an instance of the class(means object) 
+/*static variables and static functions are associated with the class rather than an instance of the class(means object) 
 they also dont call cunstrutors because constructer is called only when object is create*/
 
 void main(){
