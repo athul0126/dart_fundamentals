@@ -1,14 +1,22 @@
 void main() async{
 
-  print("sentence 1");
-  final res = await getData();
-  print(res);
-  print("sentence 2");
+  //async-await
+  print("started function for async-await");
+  final data = await getData();
+  print(data);
+  print("ended function for async-await");
+
+  //.then  no need to use async with main if we are using .then
+  print("started function for then");
+  getData().then((value) {
+    print(value);
+  },);
+  print("ended function for then");
 }
 
 Future<String> getData()async {
   return Future.delayed(Duration(seconds: 5),(){
-    return "delayed 5 seconds";
+    return 'Delayed 5 seconds';
   });
-}
   
+}
